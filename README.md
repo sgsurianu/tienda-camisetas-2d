@@ -1,36 +1,100 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🛍️ Tienda de Camisetas 2D
 
-## Getting Started
+Proyecto web interactivo desarrollado con **Next.js** y **Tailwind CSS** que permite visualizar diseños gráficos sobre camisetas en 2D.  
+El usuario puede elegir color, talla y ubicación del diseño (pecho centro, izquierdo o frontal completo), agregarlos al carrito y proceder al pago.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## 🚀 Objetivo del proyecto
+Este proyecto tiene fines **pedagógicos y de portafolio**, con el propósito de aprender y demostrar las bases del desarrollo web profesional con React / Next.js, incluyendo:
+
+- Arquitectura moderna **App Router** de Next.js.  
+- Integración de **Tailwind CSS** para estilos rápidos y consistentes.  
+- Manejo de **estado y componentes** para un flujo completo (selección, visualización, carrito).  
+- Preparación para integrar pasarelas de pago (Wompi, MercadoPago o PayU).  
+
+---
+
+## 🧠 Características principales
+- Visualizador 2D de camisetas (sin IA ni 3D).  
+- Diseños fijos para control de impresión.  
+- Selector de color, talla y cantidad.  
+- Carrito lateral con cálculo de subtotal.  
+- Estructura escalable lista para integración con API de pagos.  
+
+---
+
+## ⚙️ Tecnologías utilizadas
+| Tecnología | Uso principal |
+|-------------|----------------|
+| [Next.js 15](https://nextjs.org/) | Framework React moderno con App Router |
+| [React](https://react.dev/) | Librería de componentes interactivos |
+| [Tailwind CSS](https://tailwindcss.com/) | Framework CSS utilitario |
+| [TypeScript](https://www.typescriptlang.org/) | Tipado estático y escalabilidad |
+| [Git + GitHub](https://github.com/sgsurianu/tienda-camisetas-2d) | Control de versiones y publicación |
+| [Vercel](https://vercel.com/) *(futuro)* | Despliegue gratuito y continuo |
+
+---
+
+## 🧩 Estructura del proyecto
+```
+tienda-camisetas-2d/
+├─ app/
+│  ├─ page.tsx              → Página principal (viewer + catálogo)
+│  ├─ api/checkout/route.ts → Endpoint de prueba para pagos
+│  └─ globals.css           → Estilos globales (Tailwind)
+├─ components/
+│  ├─ TShirtViewer.tsx      → Render de camiseta + overlay del diseño
+│  └─ DesignGrid.tsx        → Cuadrícula de diseños
+├─ lib/
+│  ├─ data.ts               → Catálogo inicial de productos y diseños
+│  ├─ types.ts              → Tipos TypeScript (Product, Design, etc.)
+│  └─ utils.ts              → Funciones auxiliares (formato SVG/COP)
+├─ public/                  → Archivos estáticos (ej. base-tee.svg)
+└─ package.json             → Dependencias y scripts
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 💻 Cómo ejecutar en local
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+1. **Clona el repositorio**
+   ```bash
+   git clone https://github.com/sgsurianu/tienda-camisetas-2d.git
+   cd tienda-camisetas-2d
+   ```
 
-## Learn More
+2. **Instala dependencias**
+   ```bash
+   npm install
+   ```
 
-To learn more about Next.js, take a look at the following resources:
+3. **Ejecuta en modo desarrollo**
+   ```bash
+   npm run dev
+   ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+4. Abre [http://localhost:3000](http://localhost:3000)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## 📦 Próximas mejoras
+- [ ] Conexión con **pasarela de pago Wompi/MercadoPago**  
+- [ ] Panel **/admin** para subir nuevos diseños  
+- [ ] Base de datos para catálogo dinámico (PostgreSQL o MongoDB)  
+- [ ] Despliegue en **Vercel**  
+- [ ] Optimización SEO y responsive avanzado  
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 👤 Autor
+
+**Sebastián García Surianu**  
+👨‍💻 Compositor, docente universitario e ingeniero informático  
+🌐 [GitHub](https://github.com/sgsurianu) · [LinkedIn](https://linkedin.com/in/sgsurianu)  
+
+---
+
+## 🪄 Licencia
+Este proyecto tiene fines educativos y de portafolio.  
+Puedes usarlo como base para aprender, mejorar o extender con nuevas funciones.
