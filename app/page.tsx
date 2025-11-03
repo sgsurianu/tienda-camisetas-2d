@@ -38,7 +38,7 @@ export default function Home() {
   };
 
   return (
-    <div className="min-h-screen bg-slate-50 text-slate-900">
+    <div className="min-h-screen bg-green-100 flex flex-col items-center justify-center">
       <header className="sticky top-0 z-10 bg-white/70 backdrop-blur border-b border-slate-200">
         <div className="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
           <h1 className="text-xl md:text-2xl font-semibold">Lienzos Arts – Tienda 2D</h1>
