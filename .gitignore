@@ -44,3 +44,6 @@ node_modules
 .next
 .env
 .DS_Store
+
+# Parches locales
+updates/*.patch
