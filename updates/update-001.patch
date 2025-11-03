@@ -1,0 +1,33 @@
+diff --git a/components/TShirtViewer.tsx b/components/TShirtViewer.tsx
+index 1234567..89abcde 100644
+--- a/components/TShirtViewer.tsx
++++ b/components/TShirtViewer.tsx
+@@ -9,7 +9,8 @@ export default function TShirtViewer({ product, design, placement }:{ product:Product; design:Design; placement:PlacementKey; }){
+   const designUrl = useMemo(()=>svgToDataUrl(design.svg),[design.svg]);
+   const box = PLACEMENTS[placement].box;
+   return (
+-    <div className="relative w-full aspect-[6/7] bg-slate-100 rounded-2xl overflow-hidden">
+-      <Image src={product.imageUrl} alt="camiseta" fill className="object-contain"/>
+-      <div className="absolute" style={{ left: box.x, top: box.y, width: box.w, height: box.h }}>
+-        <img src={designUrl} alt="diseño" className="w-full h-full object-contain"/>
+-      </div>
+-    </div>
++    <div className="relative w-full aspect-[6/7] bg-gray-200 rounded-2xl overflow-hidden">
++      <Image src={product.imageUrl} alt="camiseta blanca" fill className="object-contain"/>
++      <div className="absolute" style={{ left: box.x, top: box.y, width: box.w, height: box.h }}>
++        <img src={designUrl} alt="diseño" className="w-full h-full object-contain"/>
++      </div>
++      <p className="absolute bottom-2 left-2 text-xs text-gray-500">Vista frontal</p>
++    </div>
+   );
+ }
+diff --git a/lib/data.ts b/lib/data.ts
+index 7654321..fedcba9 100644
+--- a/lib/data.ts
++++ b/lib/data.ts
+@@ -30,7 +30,7 @@ export const SIZES = ["S","M","L","XL","2XL"] as const;
+
+ export const PRODUCTS: Product[] = [
+-  { id: "tee-wht", name: "Camiseta Blanca Unisex", baseColor:"#ffffff", imageUrl:"/base-tee.svg", price: 52000 },
++  { id: "tee-wht", name: "Camiseta Blanca Unisex", baseColor:"#ffffff", imageUrl:"/base-tee.svg", price: 49000 },
+ ];
